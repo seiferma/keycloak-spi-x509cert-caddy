@@ -1,9 +1,13 @@
 name: Java CI with Gradle
 
 on:
-  push:
-  pull_request:
-  workflow_dispatch:
+  workflow_call:
+    inputs:
+      version:
+        description: 'The version of the library'
+        default: '0.0.1-SNAPSHOT'
+        required: false
+        type: string
 
 jobs:
   build:
@@ -21,6 +25,8 @@ jobs:
       uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
     - name: Build with Gradle Wrapper
       run: ./gradlew build
+      env:
+        CI_RELEASE_VERSION: ${{ github.event.inputs.version }}
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.5.0
       with:

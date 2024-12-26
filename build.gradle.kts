@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "io.github.seiferma.keycloak.spi.x509cert.caddy"
-version = "1.0-SNAPSHOT"
+version = System.getenv("CI_RELEASE_VERSION") ?: "0.0.1-SNAPSHOT"
 
 repositories {
     mavenCentral()
