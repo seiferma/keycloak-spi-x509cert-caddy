@@ -1,5 +1,9 @@
 # keycloak-spi-x509cert-caddy
 
+[![Build Status of Main](https://img.shields.io/github/check-runs/seiferma/keycloak-spi-x509cert-caddy/main)](https://github.com/seiferma/keycloak-spi-x509cert-caddy/actions?query=branch%3Amain++)
+[![Latest Release](https://img.shields.io/github/v/release/seiferma/keycloak-spi-x509cert-caddy)](https://github.com/seiferma/keycloak-spi-x509cert-caddy/releases/latest)
+[![License](https://img.shields.io/github/license/seiferma/keycloak-spi-x509cert-caddy)](https://github.com/seiferma/keycloak-spi-x509cert-caddy/blob/main/LICENSE)
+
 This repository hosts an implementation of the X509 client certificate lookup for Keyloak in combination with a
 Caddy reverse proxy.
 
